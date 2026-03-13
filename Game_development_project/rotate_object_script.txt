@@ -1,0 +1,14 @@
+using UnityEngine;
+public class RotateYourObject:MonoBehaviour{
+private float turnSpeed=10.0f;
+void start()
+{
+  
+}
+void update()
+{
+  verticalInput=Input.GetAxis("Vertical")
+  transform.Rotate(Vector3.up,turnSpeed*Time.deltatime*verticalInput);
+}
+
+}
