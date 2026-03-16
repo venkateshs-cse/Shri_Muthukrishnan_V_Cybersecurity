@@ -1,0 +1,12 @@
+using UnityEngine;
+public class ForwardMovement : MonoBehaviour
+{
+float speed=5 //which 5 metre per second
+void start()
+{
+}
+void update()
+{
+transform.Translate(Vector3.forward*Time.deltatime*speed);
+}
+}
