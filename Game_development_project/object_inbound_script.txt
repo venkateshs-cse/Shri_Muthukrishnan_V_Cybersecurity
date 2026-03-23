@@ -1,0 +1,25 @@
+using UnityEngine;
+public class ObjectInBound:MonoBehaviour
+{
+private float bound=10.0f;
+private float playerSpeed=2.0f;
+
+void start()
+{
+
+}
+void update()
+{
+  if(transform.position.x < -bound)
+{
+  transform.position=new Vector3(-bound,transform.position.y,transform.position.z);
+}
+if(transform.position.x>bound)
+{
+transform.position=new Vector3(bound,transform.position.y,transform.position.z)
+}
+
+horizontalInput=Input.GetAxis("horizontal");
+transform.Translate(Vector3.right*speed*Time.deltatime*horizontalInput)
+}
+}
