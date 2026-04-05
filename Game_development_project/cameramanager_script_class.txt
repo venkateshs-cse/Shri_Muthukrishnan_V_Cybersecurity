@@ -1,0 +1,35 @@
+using UnityEngine;
+
+public class CameraManager : MonoBehaviour
+{
+
+    public Camera thirdPersonViewp1;
+    public Camera firstPersonViewp1;
+     public Camera thirdPersonViewp2;
+    public Camera firstPersonViewp2;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    { 
+      thirdPersonViewp1.enabled=true;
+      firstPersonViewp1.enabled=false;
+      thirdPersonViewp2.enabled=true;
+      firstPersonViewp2.enabled=false;
+      
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            thirdPersonViewp1.enabled=!thirdPersonViewp1.enabled;
+            firstPersonViewp1.enabled=!firstPersonViewp1.enabled;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            thirdPersonViewp2.enabled=!thirdPersonViewp2.enabled;
+            firstPersonViewp2.enabled=!firstPersonViewp2.enabled;
+        }
+    }
+}
